@@ -4,9 +4,9 @@
  *
  * This software may be modified and distributed under the terms
  * of the MIT license.  See the LICENSE file for details.
- * 
+ *
  * http://github.com/piranhacms/piranha.core
- * 
+ *
  */
 
 using Microsoft.EntityFrameworkCore;
@@ -27,7 +27,7 @@ namespace Piranha
         /// </summary>
         /// <param name="args">The arguments</param>
         /// <returns>The db context</returns>
-        public Db CreateDbContext(string[] args) 
+        public Db CreateDbContext(string[] args)
         {
             var builder = new DbContextOptionsBuilder<Db>();
             builder.UseSqlite("Filename=./piranha.dev.db");

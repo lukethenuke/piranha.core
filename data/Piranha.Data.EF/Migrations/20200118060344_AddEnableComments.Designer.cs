@@ -21,30 +21,23 @@ namespace Piranha.Migrations
             modelBuilder.Entity("Piranha.Data.Alias", b =>
                 {
                     b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("TEXT");
+                        .ValueGeneratedOnAdd();
 
                     b.Property<string>("AliasUrl")
                         .IsRequired()
-                        .HasColumnType("TEXT")
                         .HasMaxLength(256);
 
-                    b.Property<DateTime>("Created")
-                        .HasColumnType("TEXT");
+                    b.Property<DateTime>("Created");
 
-                    b.Property<DateTime>("LastModified")
-                        .HasColumnType("TEXT");
+                    b.Property<DateTime>("LastModified");
 
                     b.Property<string>("RedirectUrl")
                         .IsRequired()
-                        .HasColumnType("TEXT")
                         .HasMaxLength(256);
 
-                    b.Property<Guid>("SiteId")
-                        .HasColumnType("TEXT");
+                    b.Property<Guid>("SiteId");
 
-                    b.Property<int>("Type")
-                        .HasColumnType("INTEGER");
+                    b.Property<int>("Type");
 
                     b.HasKey("Id");
 
@@ -57,28 +50,21 @@ namespace Piranha.Migrations
             modelBuilder.Entity("Piranha.Data.Block", b =>
                 {
                     b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("TEXT");
+                        .ValueGeneratedOnAdd();
 
                     b.Property<string>("CLRType")
                         .IsRequired()
-                        .HasColumnType("TEXT")
                         .HasMaxLength(256);
 
-                    b.Property<DateTime>("Created")
-                        .HasColumnType("TEXT");
+                    b.Property<DateTime>("Created");
 
-                    b.Property<bool>("IsReusable")
-                        .HasColumnType("INTEGER");
+                    b.Property<bool>("IsReusable");
 
-                    b.Property<DateTime>("LastModified")
-                        .HasColumnType("TEXT");
+                    b.Property<DateTime>("LastModified");
 
-                    b.Property<Guid?>("ParentId")
-                        .HasColumnType("TEXT");
+                    b.Property<Guid?>("ParentId");
 
                     b.Property<string>("Title")
-                        .HasColumnType("TEXT")
                         .HasMaxLength(128);
 
                     b.HasKey("Id");
@@ -89,27 +75,21 @@ namespace Piranha.Migrations
             modelBuilder.Entity("Piranha.Data.BlockField", b =>
                 {
                     b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("TEXT");
+                        .ValueGeneratedOnAdd();
 
-                    b.Property<Guid>("BlockId")
-                        .HasColumnType("TEXT");
+                    b.Property<Guid>("BlockId");
 
                     b.Property<string>("CLRType")
                         .IsRequired()
-                        .HasColumnType("TEXT")
                         .HasMaxLength(256);
 
                     b.Property<string>("FieldId")
                         .IsRequired()
-                        .HasColumnType("TEXT")
                         .HasMaxLength(64);
 
-                    b.Property<int>("SortOrder")
-                        .HasColumnType("INTEGER");
+                    b.Property<int>("SortOrder");
 
-                    b.Property<string>("Value")
-                        .HasColumnType("TEXT");
+                    b.Property<string>("Value");
 
                     b.HasKey("Id");
 
@@ -122,26 +102,20 @@ namespace Piranha.Migrations
             modelBuilder.Entity("Piranha.Data.Category", b =>
                 {
                     b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("TEXT");
+                        .ValueGeneratedOnAdd();
 
-                    b.Property<Guid>("BlogId")
-                        .HasColumnType("TEXT");
+                    b.Property<Guid>("BlogId");
 
-                    b.Property<DateTime>("Created")
-                        .HasColumnType("TEXT");
+                    b.Property<DateTime>("Created");
 
-                    b.Property<DateTime>("LastModified")
-                        .HasColumnType("TEXT");
+                    b.Property<DateTime>("LastModified");
 
                     b.Property<string>("Slug")
                         .IsRequired()
-                        .HasColumnType("TEXT")
                         .HasMaxLength(64);
 
                     b.Property<string>("Title")
                         .IsRequired()
-                        .HasColumnType("TEXT")
                         .HasMaxLength(64);
 
                     b.HasKey("Id");
@@ -155,42 +129,31 @@ namespace Piranha.Migrations
             modelBuilder.Entity("Piranha.Data.Media", b =>
                 {
                     b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("TEXT");
+                        .ValueGeneratedOnAdd();
 
                     b.Property<string>("ContentType")
                         .IsRequired()
-                        .HasColumnType("TEXT")
                         .HasMaxLength(256);
 
-                    b.Property<DateTime>("Created")
-                        .HasColumnType("TEXT");
+                    b.Property<DateTime>("Created");
 
                     b.Property<string>("Filename")
                         .IsRequired()
-                        .HasColumnType("TEXT")
                         .HasMaxLength(128);
 
-                    b.Property<Guid?>("FolderId")
-                        .HasColumnType("TEXT");
+                    b.Property<Guid?>("FolderId");
 
-                    b.Property<int?>("Height")
-                        .HasColumnType("INTEGER");
+                    b.Property<int?>("Height");
 
-                    b.Property<DateTime>("LastModified")
-                        .HasColumnType("TEXT");
+                    b.Property<DateTime>("LastModified");
 
-                    b.Property<string>("PublicUrl")
-                        .HasColumnType("TEXT");
+                    b.Property<string>("PublicUrl");
 
-                    b.Property<long>("Size")
-                        .HasColumnType("INTEGER");
+                    b.Property<long>("Size");
 
-                    b.Property<int>("Type")
-                        .HasColumnType("INTEGER");
+                    b.Property<int>("Type");
 
-                    b.Property<int?>("Width")
-                        .HasColumnType("INTEGER");
+                    b.Property<int?>("Width");
 
                     b.HasKey("Id");
 
@@ -202,19 +165,15 @@ namespace Piranha.Migrations
             modelBuilder.Entity("Piranha.Data.MediaFolder", b =>
                 {
                     b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("TEXT");
+                        .ValueGeneratedOnAdd();
 
-                    b.Property<DateTime>("Created")
-                        .HasColumnType("TEXT");
+                    b.Property<DateTime>("Created");
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("TEXT")
                         .HasMaxLength(128);
 
-                    b.Property<Guid?>("ParentId")
-                        .HasColumnType("TEXT");
+                    b.Property<Guid?>("ParentId");
 
                     b.HasKey("Id");
 
@@ -224,24 +183,18 @@ namespace Piranha.Migrations
             modelBuilder.Entity("Piranha.Data.MediaVersion", b =>
                 {
                     b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("TEXT");
+                        .ValueGeneratedOnAdd();
 
                     b.Property<string>("FileExtension")
-                        .HasColumnType("TEXT")
                         .HasMaxLength(8);
 
-                    b.Property<int?>("Height")
-                        .HasColumnType("INTEGER");
+                    b.Property<int?>("Height");
 
-                    b.Property<Guid>("MediaId")
-                        .HasColumnType("TEXT");
+                    b.Property<Guid>("MediaId");
 
-                    b.Property<long>("Size")
-                        .HasColumnType("INTEGER");
+                    b.Property<long>("Size");
 
-                    b.Property<int>("Width")
-                        .HasColumnType("INTEGER");
+                    b.Property<int>("Width");
 
                     b.HasKey("Id");
 
@@ -254,81 +207,61 @@ namespace Piranha.Migrations
             modelBuilder.Entity("Piranha.Data.Page", b =>
                 {
                     b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("TEXT");
+                        .ValueGeneratedOnAdd();
 
                     b.Property<string>("ContentType")
                         .IsRequired()
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("TEXT")
                         .HasMaxLength(255)
                         .HasDefaultValue("Page");
 
-                    b.Property<DateTime>("Created")
-                        .HasColumnType("TEXT");
+                    b.Property<DateTime>("Created");
 
                     b.Property<bool>("EnableComments")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER")
                         .HasDefaultValue(false);
 
-                    b.Property<bool>("IsHidden")
-                        .HasColumnType("INTEGER");
+                    b.Property<bool>("IsHidden");
 
-                    b.Property<DateTime>("LastModified")
-                        .HasColumnType("TEXT");
+                    b.Property<DateTime>("LastModified");
 
                     b.Property<string>("MetaDescription")
-                        .HasColumnType("TEXT")
                         .HasMaxLength(256);
 
                     b.Property<string>("MetaKeywords")
-                        .HasColumnType("TEXT")
                         .HasMaxLength(128);
 
                     b.Property<string>("NavigationTitle")
-                        .HasColumnType("TEXT")
                         .HasMaxLength(128);
 
-                    b.Property<Guid?>("OriginalPageId")
-                        .HasColumnType("TEXT");
+                    b.Property<Guid?>("OriginalPageId");
 
                     b.Property<string>("PageTypeId")
                         .IsRequired()
-                        .HasColumnType("TEXT")
                         .HasMaxLength(64);
 
-                    b.Property<Guid?>("ParentId")
-                        .HasColumnType("TEXT");
+                    b.Property<Guid?>("ParentId");
 
-                    b.Property<DateTime?>("Published")
-                        .HasColumnType("TEXT");
+                    b.Property<DateTime?>("Published");
 
-                    b.Property<int>("RedirectType")
-                        .HasColumnType("INTEGER");
+                    b.Property<int>("RedirectType");
 
                     b.Property<string>("RedirectUrl")
-                        .HasColumnType("TEXT")
                         .HasMaxLength(256);
 
                     b.Property<string>("Route")
-                        .HasColumnType("TEXT")
                         .HasMaxLength(256);
 
-                    b.Property<Guid>("SiteId")
-                        .HasColumnType("TEXT");
+                    b.Property<Guid>("SiteId");
 
                     b.Property<string>("Slug")
                         .IsRequired()
-                        .HasColumnType("TEXT")
                         .HasMaxLength(128);
 
-                    b.Property<int>("SortOrder")
-                        .HasColumnType("INTEGER");
+                    b.Property<int>("SortOrder");
 
                     b.Property<string>("Title")
                         .IsRequired()
-                        .HasColumnType("TEXT")
                         .HasMaxLength(128);
 
                     b.HasKey("Id");
@@ -346,20 +279,15 @@ namespace Piranha.Migrations
             modelBuilder.Entity("Piranha.Data.PageBlock", b =>
                 {
                     b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("TEXT");
+                        .ValueGeneratedOnAdd();
 
-                    b.Property<Guid>("BlockId")
-                        .HasColumnType("TEXT");
+                    b.Property<Guid>("BlockId");
 
-                    b.Property<Guid>("PageId")
-                        .HasColumnType("TEXT");
+                    b.Property<Guid>("PageId");
 
-                    b.Property<Guid?>("ParentId")
-                        .HasColumnType("TEXT");
+                    b.Property<Guid?>("ParentId");
 
-                    b.Property<int>("SortOrder")
-                        .HasColumnType("INTEGER");
+                    b.Property<int>("SortOrder");
 
                     b.HasKey("Id");
 
@@ -374,37 +302,28 @@ namespace Piranha.Migrations
             modelBuilder.Entity("Piranha.Data.PageComment", b =>
                 {
                     b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("TEXT");
+                        .ValueGeneratedOnAdd();
 
                     b.Property<string>("Author")
                         .IsRequired()
-                        .HasColumnType("TEXT")
                         .HasMaxLength(128);
 
-                    b.Property<string>("Body")
-                        .HasColumnType("TEXT");
+                    b.Property<string>("Body");
 
-                    b.Property<DateTime>("Created")
-                        .HasColumnType("TEXT");
+                    b.Property<DateTime>("Created");
 
                     b.Property<string>("Email")
                         .IsRequired()
-                        .HasColumnType("TEXT")
                         .HasMaxLength(128);
 
-                    b.Property<bool>("IsApproved")
-                        .HasColumnType("INTEGER");
+                    b.Property<bool>("IsApproved");
 
-                    b.Property<Guid>("PageId")
-                        .HasColumnType("TEXT");
+                    b.Property<Guid>("PageId");
 
                     b.Property<string>("Url")
-                        .HasColumnType("TEXT")
                         .HasMaxLength(256);
 
-                    b.Property<string>("UserId")
-                        .HasColumnType("TEXT");
+                    b.Property<string>("UserId");
 
                     b.HasKey("Id");
 
@@ -416,32 +335,25 @@ namespace Piranha.Migrations
             modelBuilder.Entity("Piranha.Data.PageField", b =>
                 {
                     b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("TEXT");
+                        .ValueGeneratedOnAdd();
 
                     b.Property<string>("CLRType")
                         .IsRequired()
-                        .HasColumnType("TEXT")
                         .HasMaxLength(256);
 
                     b.Property<string>("FieldId")
                         .IsRequired()
-                        .HasColumnType("TEXT")
                         .HasMaxLength(64);
 
-                    b.Property<Guid>("PageId")
-                        .HasColumnType("TEXT");
+                    b.Property<Guid>("PageId");
 
                     b.Property<string>("RegionId")
                         .IsRequired()
-                        .HasColumnType("TEXT")
                         .HasMaxLength(64);
 
-                    b.Property<int>("SortOrder")
-                        .HasColumnType("INTEGER");
+                    b.Property<int>("SortOrder");
 
-                    b.Property<string>("Value")
-                        .HasColumnType("TEXT");
+                    b.Property<string>("Value");
 
                     b.HasKey("Id");
 
@@ -453,17 +365,13 @@ namespace Piranha.Migrations
             modelBuilder.Entity("Piranha.Data.PageRevision", b =>
                 {
                     b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("TEXT");
+                        .ValueGeneratedOnAdd();
 
-                    b.Property<DateTime>("Created")
-                        .HasColumnType("TEXT");
+                    b.Property<DateTime>("Created");
 
-                    b.Property<string>("Data")
-                        .HasColumnType("TEXT");
+                    b.Property<string>("Data");
 
-                    b.Property<Guid>("PageId")
-                        .HasColumnType("TEXT");
+                    b.Property<Guid>("PageId");
 
                     b.HasKey("Id");
 
@@ -475,21 +383,17 @@ namespace Piranha.Migrations
             modelBuilder.Entity("Piranha.Data.PageType", b =>
                 {
                     b.Property<string>("Id")
-                        .HasColumnType("TEXT")
+                        .ValueGeneratedOnAdd()
                         .HasMaxLength(64);
 
-                    b.Property<string>("Body")
-                        .HasColumnType("TEXT");
+                    b.Property<string>("Body");
 
                     b.Property<string>("CLRType")
-                        .HasColumnType("TEXT")
                         .HasMaxLength(256);
 
-                    b.Property<DateTime>("Created")
-                        .HasColumnType("TEXT");
+                    b.Property<DateTime>("Created");
 
-                    b.Property<DateTime>("LastModified")
-                        .HasColumnType("TEXT");
+                    b.Property<DateTime>("LastModified");
 
                     b.HasKey("Id");
 
@@ -499,26 +403,20 @@ namespace Piranha.Migrations
             modelBuilder.Entity("Piranha.Data.Param", b =>
                 {
                     b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("TEXT");
+                        .ValueGeneratedOnAdd();
 
-                    b.Property<DateTime>("Created")
-                        .HasColumnType("TEXT");
+                    b.Property<DateTime>("Created");
 
                     b.Property<string>("Description")
-                        .HasColumnType("TEXT")
                         .HasMaxLength(256);
 
                     b.Property<string>("Key")
                         .IsRequired()
-                        .HasColumnType("TEXT")
                         .HasMaxLength(64);
 
-                    b.Property<DateTime>("LastModified")
-                        .HasColumnType("TEXT");
+                    b.Property<DateTime>("LastModified");
 
-                    b.Property<string>("Value")
-                        .HasColumnType("TEXT");
+                    b.Property<string>("Value");
 
                     b.HasKey("Id");
 
@@ -531,61 +429,46 @@ namespace Piranha.Migrations
             modelBuilder.Entity("Piranha.Data.Post", b =>
                 {
                     b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("TEXT");
+                        .ValueGeneratedOnAdd();
 
-                    b.Property<Guid>("BlogId")
-                        .HasColumnType("TEXT");
+                    b.Property<Guid>("BlogId");
 
-                    b.Property<Guid>("CategoryId")
-                        .HasColumnType("TEXT");
+                    b.Property<Guid>("CategoryId");
 
-                    b.Property<DateTime>("Created")
-                        .HasColumnType("TEXT");
+                    b.Property<DateTime>("Created");
 
                     b.Property<bool>("EnableComments")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER")
                         .HasDefaultValue(true);
 
-                    b.Property<DateTime>("LastModified")
-                        .HasColumnType("TEXT");
+                    b.Property<DateTime>("LastModified");
 
                     b.Property<string>("MetaDescription")
-                        .HasColumnType("TEXT")
                         .HasMaxLength(256);
 
                     b.Property<string>("MetaKeywords")
-                        .HasColumnType("TEXT")
                         .HasMaxLength(128);
 
                     b.Property<string>("PostTypeId")
                         .IsRequired()
-                        .HasColumnType("TEXT")
                         .HasMaxLength(64);
 
-                    b.Property<DateTime?>("Published")
-                        .HasColumnType("TEXT");
+                    b.Property<DateTime?>("Published");
 
-                    b.Property<int>("RedirectType")
-                        .HasColumnType("INTEGER");
+                    b.Property<int>("RedirectType");
 
                     b.Property<string>("RedirectUrl")
-                        .HasColumnType("TEXT")
                         .HasMaxLength(256);
 
                     b.Property<string>("Route")
-                        .HasColumnType("TEXT")
                         .HasMaxLength(256);
 
                     b.Property<string>("Slug")
                         .IsRequired()
-                        .HasColumnType("TEXT")
                         .HasMaxLength(128);
 
                     b.Property<string>("Title")
                         .IsRequired()
-                        .HasColumnType("TEXT")
                         .HasMaxLength(128);
 
                     b.HasKey("Id");
@@ -603,20 +486,15 @@ namespace Piranha.Migrations
             modelBuilder.Entity("Piranha.Data.PostBlock", b =>
                 {
                     b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("TEXT");
+                        .ValueGeneratedOnAdd();
 
-                    b.Property<Guid>("BlockId")
-                        .HasColumnType("TEXT");
+                    b.Property<Guid>("BlockId");
 
-                    b.Property<Guid?>("ParentId")
-                        .HasColumnType("TEXT");
+                    b.Property<Guid?>("ParentId");
 
-                    b.Property<Guid>("PostId")
-                        .HasColumnType("TEXT");
+                    b.Property<Guid>("PostId");
 
-                    b.Property<int>("SortOrder")
-                        .HasColumnType("INTEGER");
+                    b.Property<int>("SortOrder");
 
                     b.HasKey("Id");
 
@@ -631,37 +509,28 @@ namespace Piranha.Migrations
             modelBuilder.Entity("Piranha.Data.PostComment", b =>
                 {
                     b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("TEXT");
+                        .ValueGeneratedOnAdd();
 
                     b.Property<string>("Author")
                         .IsRequired()
-                        .HasColumnType("TEXT")
                         .HasMaxLength(128);
 
-                    b.Property<string>("Body")
-                        .HasColumnType("TEXT");
+                    b.Property<string>("Body");
 
-                    b.Property<DateTime>("Created")
-                        .HasColumnType("TEXT");
+                    b.Property<DateTime>("Created");
 
                     b.Property<string>("Email")
                         .IsRequired()
-                        .HasColumnType("TEXT")
                         .HasMaxLength(128);
 
-                    b.Property<bool>("IsApproved")
-                        .HasColumnType("INTEGER");
+                    b.Property<bool>("IsApproved");
 
-                    b.Property<Guid>("PostId")
-                        .HasColumnType("TEXT");
+                    b.Property<Guid>("PostId");
 
                     b.Property<string>("Url")
-                        .HasColumnType("TEXT")
                         .HasMaxLength(256);
 
                     b.Property<string>("UserId")
-                        .HasColumnType("TEXT")
                         .HasMaxLength(128);
 
                     b.HasKey("Id");
@@ -674,32 +543,25 @@ namespace Piranha.Migrations
             modelBuilder.Entity("Piranha.Data.PostField", b =>
                 {
                     b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("TEXT");
+                        .ValueGeneratedOnAdd();
 
                     b.Property<string>("CLRType")
                         .IsRequired()
-                        .HasColumnType("TEXT")
                         .HasMaxLength(256);
 
                     b.Property<string>("FieldId")
                         .IsRequired()
-                        .HasColumnType("TEXT")
                         .HasMaxLength(64);
 
-                    b.Property<Guid>("PostId")
-                        .HasColumnType("TEXT");
+                    b.Property<Guid>("PostId");
 
                     b.Property<string>("RegionId")
                         .IsRequired()
-                        .HasColumnType("TEXT")
                         .HasMaxLength(64);
 
-                    b.Property<int>("SortOrder")
-                        .HasColumnType("INTEGER");
+                    b.Property<int>("SortOrder");
 
-                    b.Property<string>("Value")
-                        .HasColumnType("TEXT");
+                    b.Property<string>("Value");
 
                     b.HasKey("Id");
 
@@ -711,17 +573,13 @@ namespace Piranha.Migrations
             modelBuilder.Entity("Piranha.Data.PostRevision", b =>
                 {
                     b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("TEXT");
+                        .ValueGeneratedOnAdd();
 
-                    b.Property<DateTime>("Created")
-                        .HasColumnType("TEXT");
+                    b.Property<DateTime>("Created");
 
-                    b.Property<string>("Data")
-                        .HasColumnType("TEXT");
+                    b.Property<string>("Data");
 
-                    b.Property<Guid>("PostId")
-                        .HasColumnType("TEXT");
+                    b.Property<Guid>("PostId");
 
                     b.HasKey("Id");
 
@@ -732,11 +590,9 @@ namespace Piranha.Migrations
 
             modelBuilder.Entity("Piranha.Data.PostTag", b =>
                 {
-                    b.Property<Guid>("PostId")
-                        .HasColumnType("TEXT");
+                    b.Property<Guid>("PostId");
 
-                    b.Property<Guid>("TagId")
-                        .HasColumnType("TEXT");
+                    b.Property<Guid>("TagId");
 
                     b.HasKey("PostId", "TagId");
 
@@ -748,21 +604,17 @@ namespace Piranha.Migrations
             modelBuilder.Entity("Piranha.Data.PostType", b =>
                 {
                     b.Property<string>("Id")
-                        .HasColumnType("TEXT")
+                        .ValueGeneratedOnAdd()
                         .HasMaxLength(64);
 
-                    b.Property<string>("Body")
-                        .HasColumnType("TEXT");
+                    b.Property<string>("Body");
 
                     b.Property<string>("CLRType")
-                        .HasColumnType("TEXT")
                         .HasMaxLength(256);
 
-                    b.Property<DateTime>("Created")
-                        .HasColumnType("TEXT");
+                    b.Property<DateTime>("Created");
 
-                    b.Property<DateTime>("LastModified")
-                        .HasColumnType("TEXT");
+                    b.Property<DateTime>("LastModified");
 
                     b.HasKey("Id");
 
@@ -772,44 +624,33 @@ namespace Piranha.Migrations
             modelBuilder.Entity("Piranha.Data.Site", b =>
                 {
                     b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("TEXT");
+                        .ValueGeneratedOnAdd();
 
-                    b.Property<DateTime?>("ContentLastModified")
-                        .HasColumnType("TEXT");
+                    b.Property<DateTime?>("ContentLastModified");
 
-                    b.Property<DateTime>("Created")
-                        .HasColumnType("TEXT");
+                    b.Property<DateTime>("Created");
 
                     b.Property<string>("Culture")
-                        .HasColumnType("TEXT")
                         .HasMaxLength(6);
 
                     b.Property<string>("Description")
-                        .HasColumnType("TEXT")
                         .HasMaxLength(256);
 
                     b.Property<string>("Hostnames")
-                        .HasColumnType("TEXT")
                         .HasMaxLength(256);
 
                     b.Property<string>("InternalId")
                         .IsRequired()
-                        .HasColumnType("TEXT")
                         .HasMaxLength(64);
 
-                    b.Property<bool>("IsDefault")
-                        .HasColumnType("INTEGER");
+                    b.Property<bool>("IsDefault");
 
-                    b.Property<DateTime>("LastModified")
-                        .HasColumnType("TEXT");
+                    b.Property<DateTime>("LastModified");
 
                     b.Property<string>("SiteTypeId")
-                        .HasColumnType("TEXT")
                         .HasMaxLength(64);
 
                     b.Property<string>("Title")
-                        .HasColumnType("TEXT")
                         .HasMaxLength(128);
 
                     b.HasKey("Id");
@@ -823,32 +664,25 @@ namespace Piranha.Migrations
             modelBuilder.Entity("Piranha.Data.SiteField", b =>
                 {
                     b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("TEXT");
+                        .ValueGeneratedOnAdd();
 
                     b.Property<string>("CLRType")
                         .IsRequired()
-                        .HasColumnType("TEXT")
                         .HasMaxLength(256);
 
                     b.Property<string>("FieldId")
                         .IsRequired()
-                        .HasColumnType("TEXT")
                         .HasMaxLength(64);
 
                     b.Property<string>("RegionId")
                         .IsRequired()
-                        .HasColumnType("TEXT")
                         .HasMaxLength(64);
 
-                    b.Property<Guid>("SiteId")
-                        .HasColumnType("TEXT");
+                    b.Property<Guid>("SiteId");
 
-                    b.Property<int>("SortOrder")
-                        .HasColumnType("INTEGER");
+                    b.Property<int>("SortOrder");
 
-                    b.Property<string>("Value")
-                        .HasColumnType("TEXT");
+                    b.Property<string>("Value");
 
                     b.HasKey("Id");
 
@@ -860,21 +694,17 @@ namespace Piranha.Migrations
             modelBuilder.Entity("Piranha.Data.SiteType", b =>
                 {
                     b.Property<string>("Id")
-                        .HasColumnType("TEXT")
+                        .ValueGeneratedOnAdd()
                         .HasMaxLength(64);
 
-                    b.Property<string>("Body")
-                        .HasColumnType("TEXT");
+                    b.Property<string>("Body");
 
                     b.Property<string>("CLRType")
-                        .HasColumnType("TEXT")
                         .HasMaxLength(256);
 
-                    b.Property<DateTime>("Created")
-                        .HasColumnType("TEXT");
+                    b.Property<DateTime>("Created");
 
-                    b.Property<DateTime>("LastModified")
-                        .HasColumnType("TEXT");
+                    b.Property<DateTime>("LastModified");
 
                     b.HasKey("Id");
 
@@ -884,26 +714,20 @@ namespace Piranha.Migrations
             modelBuilder.Entity("Piranha.Data.Tag", b =>
                 {
                     b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("TEXT");
+                        .ValueGeneratedOnAdd();
 
-                    b.Property<Guid>("BlogId")
-                        .HasColumnType("TEXT");
+                    b.Property<Guid>("BlogId");
 
-                    b.Property<DateTime>("Created")
-                        .HasColumnType("TEXT");
+                    b.Property<DateTime>("Created");
 
-                    b.Property<DateTime>("LastModified")
-                        .HasColumnType("TEXT");
+                    b.Property<DateTime>("LastModified");
 
                     b.Property<string>("Slug")
                         .IsRequired()
-                        .HasColumnType("TEXT")
                         .HasMaxLength(64);
 
                     b.Property<string>("Title")
                         .IsRequired()
-                        .HasColumnType("TEXT")
                         .HasMaxLength(64);
 
                     b.HasKey("Id");
